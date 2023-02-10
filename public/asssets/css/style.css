@@ -1,0 +1,71 @@
+/*Основные классы*/
+.headings{
+    font-size: 50px;
+    color: darkblue;
+}
+.textcontent{
+    font-size: 20px;
+    color: blue;
+}
+
+
+
+/*Классы layout headfoot*/
+.head, .nav-link{
+    font-size: 20px;   
+}
+/*Классы blade aboutcompany*/
+.about-logo{
+    width: 50%;
+    height: auto;
+}
+.about-content{
+    font-style: italic;
+    font-size: 30px;
+}
+
+/*Классы blade catalog*/
+.catalog-product-cart{
+    background-color: rgb(192, 241, 241);
+    border-radius: 10px;
+}
+.catalog-product-cart-name{
+    font-size: 30px;
+}
+.catalog-product-cart-img{
+    width: 200px;
+    height: auto;
+}
+.catalog-product-cart-price{
+    font-style: italic;
+}
+.catalog a{
+    text-decoration: none;
+}
+.catalog ul{
+    list-style-type: none;
+}
+.catalog li{
+    display: inline-flex;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*Классы blade mapcontacts*/
+.mapcontacts-img{
+    width: 100%;
+    height: auto;
+}
+.mapcontacts-link{
+    text-decoration: none;
+    display: inline-flex;
+}
+
+/*Классы blade product*/
+.product-img{
+    width: 500px;
+    height: auto;
+}
+.product ul{
+    list-style-type: none;
+}
