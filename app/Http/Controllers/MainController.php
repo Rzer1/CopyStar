@@ -23,10 +23,11 @@ class MainController extends Controller
         }
         else{
             $products = Product::orderBy($request->filter, "desc")->where('id_cat', $request->category)->get();
+
         }
 
         $category = Category::all();
-        return view('catalog', ["products"->$products, "category"->$category]);
+        return view('catalog', ["products"=>$products, "category"=>$category]);
     }
 
     public function mapcontacts()
@@ -37,12 +38,12 @@ class MainController extends Controller
     public function product($id)
     {
         $product = Product::find($id);
-        return view('product', ["product"->$product]);
+        return view('product', ["product"=>$product]);
     }
     /*Функции Корзины*/
     public function hide()
     {
-        $carts = Cart::where('id_user', Auth::user()-id)->get();
+        $carts = Cart::where('id_user', Auth::user()->id)->get();
         return view("cart", ["carts"=>$carts]);
     }
 

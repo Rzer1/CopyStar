@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,23 +14,23 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
+
 
 Route::get('/', function () {
     return view('welcome');
-});
-
+});*/
+Route::get('/', [MainController::class, 'aboutcompany']);
 Auth::routes();
-
+/*
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/
+Route::get('/home', [MainController::class, 'aboutcompany']);
+Route::get('/catalog', [MainController::class, 'catalog']);
+Route::get('/product/{id}', [MainController::class, 'product']);
+Route::get('/mapcontacts', [MainController::class, 'mapcontacts']);
 
-Route::get('/aboutcompany', [App\Http\Controllers\MainController::class, 'aboutcompany']);
-Route::get('/catalog', [App\Http\Controllers\MainController::class, 'catalog']);
-Route::get('/product/{id}', [App\Http\Controllers\MainController::class, 'product']);
-Route::get('/mapcontacts', [App\Http\Controllers\MainController::class, 'mapcontacts']);
-
-Route::get('/cart', [App\Http\Controllers\MainController::class, 'hide']);
-Route::get('/cart/productadd/{id}', [App\Http\Controllers\MainController::class, 'productaddadd']);
-Route::get('/cart/pluscount', [App\Http\Controllers\MainController::class, 'pluscount']);
-Route::get('/cart/minuscount', [App\Http\Controllers\MainController::class, 'minuscount']);
-
+Route::get('/cart', [MainController::class, 'hide']);
+Route::get('/cart/productadd/{id}', [MainController::class, 'productaddadd']);
+Route::get('/cart/pluscount', [MainController::class, 'pluscount']);
+Route::get('/cart/minuscount', [MainController::class, 'minuscount']);

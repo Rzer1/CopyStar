@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="head-logo" src="asssets\img\logo.png">
+                    <img class="head-logo" src="\public\asssets\img\logo.png">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -39,10 +39,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/registration') }}">Регистрация</a>
+                            <a class="nav-link" href="{{ url('/register') }}">Регистрация</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/autorisation') }}">Аунтификация</a>
+                            <a class="nav-link" href="{{ url('/login') }}">Аунтификация</a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
     <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="head-logo" src="asssets\img\logo.png">
+                    <img class="head-logo" src="\public\asssets\img\logo.png">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

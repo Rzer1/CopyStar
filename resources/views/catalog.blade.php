@@ -30,20 +30,22 @@
         </div>
     </div>
     <!--Верстка каталога-->
-    <h2 class="headings">Каталог</h2>
-    <div class="row justify-content-center">
-        <ul>
-            @foreach($products as $elem)
-            <li>
-                <div class="catalog-product-cart">
-                    <a href="{{ url('/product/{{ $elem->id }}') }}">
-                        <p class="catalog-product-cart-name textcontent">{{ $elem->name }}</p>
-                        <img class="catalog-product-cart-img" src="asssets\img\{{ $elem->photo }}">
-                        <p class="catalog-product-cart-price textcontent">{{ $elem->price }} руб</p>
-                    </a>
-                </div>
-            <li>
-            @endforeach
+    <div class="container">
+        <h2 class="headings">Каталог</h2>
+        <div class="row justify-content-center">
+            <ul>
+                @foreach($products as $elem)
+                <li>
+                    <div class="catalog-product-cart">
+                        <a href="/public/product/{{ $elem->id }}">
+                            <p class="catalog-product-cart-name textcontent">{{ $elem->name }}</p>
+                            <img class="catalog-product-cart-img" src="asssets\img\{{ $elem->photo }}">
+                            <p class="catalog-product-cart-price textcontent">{{ $elem->price }} руб</p>
+                        </a>
+                    </div>
+                <li>
+                @endforeach
+        </div>
     </div>
 </section>
 @endsection

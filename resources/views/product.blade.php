@@ -4,16 +4,16 @@
 <section class="product"> 
     <div class="container">
         <div class="row justify-content-center">
-            <h1 class="headings">Наименование</h1>
+            <h1 class="headings">{{ $product->name }}</h1>
             <div class="col-md-6">
-                <img class="product-img" src="asssets\img\product (1).jpg">
+                <img class="product-img" src="\public\asssets\img\{{ $product->photo }}">
             </div>
             <div class="col-md-6">
                 <p class="textcontent">Характеристики</p>
                 <ul>
-                    <li><p class="textcontent">Страна-производитель:</p></li>
-                    <li><p class="textcontent">Год выпуска:</p></li>
-                    <li><p class="textcontent">Модель:</p></li>
+                    <li><p class="textcontent">Страна-производитель:{{ $product->country }}</p></li>
+                    <li><p class="textcontent">Год выпуска:{{ $product->year }}</p></li>
+                    <li><p class="textcontent">Модель:{{ $product->model }}</p></li>
                 </ul>
             </div>
         </div>
