@@ -13,6 +13,16 @@
                     <li><p class="textcontent">Год выпуска:<?php echo e($product->year); ?></p></li>
                     <li><p class="textcontent">Модель:<?php echo e($product->model); ?></p></li>
                 </ul>
+                <?php if(auth()->guard()->check()): ?>
+                        <a href="#">В корзину!</a>
+                <?php endif; ?>
+            </div>
+            <div class="other">
+                <ul>
+                    <li><p class="textcontent">Склад:<?php echo e($product->count); ?></p></li>
+                    <li><p class="textcontent">Добавлен:<?php echo e($product->created_at); ?></p></li>
+                    <li><p class="textcontent">Обновлен:<?php echo e($product->updated_at); ?></p></li>
+                </ul>
             </div>
         </div>
     </div>

@@ -36,12 +36,16 @@
             <ul>
                 @foreach($products as $elem)
                 <li>
-                    <div class="catalog-product-cart">
+                    <div class="catalog-product-cart"> 
+
                         <a href="/public/product/{{ $elem->id }}">
                             <p class="catalog-product-cart-name textcontent">{{ $elem->name }}</p>
                             <img class="catalog-product-cart-img" src="asssets\img\{{ $elem->photo }}">
                             <p class="catalog-product-cart-price textcontent">{{ $elem->price }} руб</p>
                         </a>
+                        @auth
+                        <a href="/public/product/{{ $elem->id }}">В корзину!</a>
+                        @endauth
                     </div>
                 <li>
                 @endforeach

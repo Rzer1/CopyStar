@@ -23,7 +23,6 @@ class MainController extends Controller
         }
         else{
             $products = Product::orderBy($request->filter, "desc")->where('id_cat', $request->category)->get();
-
         }
 
         $category = Category::all();

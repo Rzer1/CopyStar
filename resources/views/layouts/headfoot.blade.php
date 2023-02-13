@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <title>CopyStar</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -26,7 +26,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/aboutcompany') }}">О нас</a>
+                            <a class="nav-link" href="{{ url('/') }}">О нас</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/catalog') }}">Каталог</a>
@@ -69,16 +69,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Где нас найти?</a>
-                        </li>
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/registration') }}">Регистрация</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/autorisation') }}">Аунтификация</a>
                         </li>
                     </ul>
                 </div>

@@ -15,6 +15,16 @@
                     <li><p class="textcontent">Год выпуска:{{ $product->year }}</p></li>
                     <li><p class="textcontent">Модель:{{ $product->model }}</p></li>
                 </ul>
+                @auth
+                        <a href="#">В корзину!</a>
+                @endauth
+            </div>
+            <div class="other">
+                <ul>
+                    <li><p class="textcontent">Склад:{{ $product->count }}</p></li>
+                    <li><p class="textcontent">Добавлен:{{ $product->created_at }}</p></li>
+                    <li><p class="textcontent">Обновлен:{{ $product->updated_at }}</p></li>
+                </ul>
             </div>
         </div>
     </div>

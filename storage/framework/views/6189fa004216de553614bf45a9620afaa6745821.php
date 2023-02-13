@@ -34,12 +34,16 @@
             <ul>
                 <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $elem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <li>
-                    <div class="catalog-product-cart">
+                    <div class="catalog-product-cart"> 
+
                         <a href="/public/product/<?php echo e($elem->id); ?>">
                             <p class="catalog-product-cart-name textcontent"><?php echo e($elem->name); ?></p>
                             <img class="catalog-product-cart-img" src="asssets\img\<?php echo e($elem->photo); ?>">
                             <p class="catalog-product-cart-price textcontent"><?php echo e($elem->price); ?> руб</p>
                         </a>
+                        <?php if(auth()->guard()->check()): ?>
+                        <a href="/public/product/<?php echo e($elem->id); ?>">В корзину!</a>
+                        <?php endif; ?>
                     </div>
                 <li>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
